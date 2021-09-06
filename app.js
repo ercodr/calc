@@ -29,9 +29,9 @@ let num2 = '';
 let op = '';
 
 // SCREEN VALIDATION
-window.addEventListener('load', () => {
-    screen.innerText = '0';
-})
+// window.addEventListener('load', () => {
+//     screen.innerText = '0';
+// })
 
 
 
@@ -39,13 +39,13 @@ window.addEventListener('load', () => {
 
 // EVENTS TO BUTTONS
 zero.addEventListener("click", ()=>{
-    if(!screen.innerText.includes('=', 0)){
+    if(screen.innerText != 0){
         screen.innerText += 0;
-    } else{
-        screen.innerText = '';
-        mini.innerText = '';
-        screen.innerText += 0;
+    } else if(screen.innerText == ''){
+        screen.innerText = 0;
     }
+
+    
     
 });
  
@@ -207,13 +207,13 @@ dot.addEventListener("click", ()=>{
  
 cls.addEventListener("click", ()=>{
     if(screen.innerText.includes('=')){
-        screen.innerText = "0";
+        screen.innerText = "";
         mini.innerText = "";
     }
 
 
     if(!screen.innerText == ''){
-        screen.innerText = "0";
+        screen.innerText = "";
     } else{
         mini.innerText = "";
     }
