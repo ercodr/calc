@@ -36,18 +36,15 @@ window.addEventListener('load', () => {
 
 
 
+
 // EVENTS TO BUTTONS
 zero.addEventListener("click", ()=>{
-    if(!screen.innerText == ''){
-        if(!screen.innerText.includes('=', 0)){
-            if(!screen.innerText.includes('0', 0)){
-                screen.innerText += 0;
-            }
-        } else{
-            screen.innerText = '';
-            mini.innerText = '';
-            screen.innerText += 0;
-        }
+    if(!screen.innerText.includes('=', 0)){
+        screen.innerText += 0;
+    } else{
+        screen.innerText = '';
+        mini.innerText = '';
+        screen.innerText += 0;
     }
     
 });
